@@ -1,0 +1,101 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden; /* Hide scrollbars */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.is-transitioning {
+    opacity: 0;
+}
+
+#smooth-scroll-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+
+.logo a, nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Horizontal Scrolling Main Section */
+.horizontal-scroll {
+    display: flex;
+    height: 100vh;
+    padding: 0 10vw;
+    align-items: center;
+}
+
+/* Sections within the horizontal scroll */
+.intro-section, .work-together-section, .projects-section {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 5vw;
+}
+
+.hello, .work-together {
+    font-size: 10vw;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+/* Projects Section */
+.projects-section {
+    padding-left: 20vw;
+}
+
+.project-list {
+    display: flex;
+    gap: 5vw;
+}
+
+.project-item {
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.project-item a {
+    color: #fff;
+    text-decoration: none;
+}

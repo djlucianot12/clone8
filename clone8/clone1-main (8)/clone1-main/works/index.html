@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - Asmobius</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 10vw;
+        }
+        .work-item a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">Asmobius</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/works">All</a></li>
+                <li><a href="/">Focus</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="works-grid" id="works-grid">
+            <!-- Projects will be loaded here -->
+        </section>
+    </main>
+
+    <script src="../js/projects.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const worksGrid = document.getElementById('works-grid');
+            if (worksGrid && typeof projects !== 'undefined') {
+                projects.forEach(projectName => {
+                    const workItem = document.createElement('div');
+                    workItem.className = 'work-item';
+                    const workLink = document.createElement('a');
+                    workLink.href = '#'; // Placeholder
+                    workLink.textContent = projectName;
+                    workItem.appendChild(workLink);
+                    worksGrid.appendChild(workItem);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
